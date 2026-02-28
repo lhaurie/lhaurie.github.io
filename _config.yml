@@ -1,0 +1,15 @@
+title: Physics Compiled
+description: Notes, thesis material and exploratory physics projects.
+theme: minima
+markdown: kramdown
+
+kramdown:
+  math_engine: mathjax
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - notes/
+  - README.md
+  - .github/

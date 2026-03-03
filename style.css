@@ -1,0 +1,246 @@
+
+p {
+  text-align: left;   /* left | center | right | justify */
+  font-size: 24px;
+}
+
+
+b{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+mail{
+  color: #5b0cb6;
+  font-size:26
+}
+
+h1 {
+  font-size: 48px;
+}
+
+li {
+    font-size:20px;
+}
+
+.center-txt {
+  text-align: center;
+}
+
+
+.center-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+} 
+
+.home-link {
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* keep the same white as header */
+}
+.home-link:hover {
+  color: #ddd;             /* optional hover effect */
+}
+
+.left, .right {
+  width: 50%;
+  padding: 20px;
+  border: 2px solid black;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+/* ------objects positioning------*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-bottom: 20px solid black;
+}
+
+.intro {
+  font-size: 26px;
+  color: #222;
+  font-weight: 500;
+}
+
+.positioning li {
+  font-style: normal;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.vulgar { color: #0a4edb; font-weight: bold; }
+.rigor { color: #a10000; font-weight: bold; }
+.indep { color: #1a7f37; font-weight: bold; }
+
+.questions li {
+  font-style: italic;
+  color: #444;
+}
+
+.closing {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.closing mail{
+  color: #5b0cb6;
+  font-size:26
+}
+
+.header-content {
+  display: flex;
+  align-items: baseline;
+  gap: 80px;
+}
+.main-title {
+  font-size: 42px;
+  font-weight: bold;
+}
+.subtitle {
+  font-size: 28px;
+  color: #ddd;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  margin-top: 120px;
+  padding: 0 40px 0px 40px;
+  gap: 60px;
+  min-height: calc(100vh - 120px);
+  align-items: stretch;   
+}
+
+/* Main content full height */
+.main-content {
+  flex: 1;                /* take all space minus sidebar */
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  padding: 40px 0 40px 40px; 
+  border-left: 4px solid black;
+  align-self: stretch;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgb(10, 42, 223);
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 60px;  /* increased from 15px */
+  display: block;       /* ensures each link is on its own line */
+}
+.menu a:hover {
+  background-color: #d38181;
+}
+
+.monthly-theorem {
+  margin-top: 60px;
+  padding: 20px 0;
+}
+
+.monthly-theorem h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.theorem-link {
+  display: block;
+  font-size: 22px;
+  line-height: 1.5;
+  text-decoration: none;
+  color: #3b2bbd;
+}
+
+.theorem-link strong {
+  font-size: 26px;
+}
+
+
+.theorem-link:hover {
+  color: #a10000;
+}
+
+
+@media (max-width: 1000px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid black;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+.chapter-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.phenomenon {
+  font-weight: bold;
+  color: #f01111;
+  text-decoration: underline;
+}
+
+.dates {
+  font-weight: bold;
+  color: #8b0000;
+}
+
+.details {
+  font-style: italic;
+  color: #333;
+}
+
+.chapter-link {
+  font-size: 26px;
+  text-decoration: none;
+  color: #1f4e79;
+  transition: all 0.2s ease;
+}
+
+.chapter-link:hover {
+  color: #db0505;
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+
+ul.subtopics {
+  list-style-type: square;
+  margin-top: 10px;
+}

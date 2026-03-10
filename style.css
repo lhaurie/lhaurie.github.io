@@ -1,9 +1,8 @@
 
 p {
   text-align: left;   /* left | center | right | justify */
-  font-size: 24px;
+  font-size: 1.2rem
 }
-
 
 b{
   font-size: 26px;
@@ -54,8 +53,8 @@ li {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: hsl(148, 45%, 83%);
 }
-
 
 
 /* ------objects positioning------*/
@@ -64,21 +63,22 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
 /* Header */
 .header-box {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
-  background-color: black;
+  height: 120px;
+  background-color: rgb(3, 148, 68);
   color: white;
   display: flex;
   align-items: center;
   padding-left: 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   z-index: 1000;
-  border-bottom: 20px solid black;
+  border-bottom: 4px solid rgb(3, 68, 12);
 }
 
 .intro {
@@ -117,6 +117,7 @@ body {
   align-items: baseline;
   gap: 80px;
 }
+
 .main-title {
   font-size: 42px;
   font-weight: bold;
@@ -130,21 +131,27 @@ body {
 .layout {
   display: flex;
   margin-top: 120px;
-  padding: 0 40px 0px 40px;
-  gap: 60px;
+  padding: 0;
   min-height: calc(100vh - 120px);
-  align-items: stretch;   
 }
 
+
 /* Main content full height */
-.main-content {
-  flex: 1;                /* take all space minus sidebar */
-  padding: 20px;
+.main-left {
+  flex: 1;
+  padding: 40px 60px 40px 40px;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+    url("background2.svg");
+
+  background-repeat: repeat;
+  background-size: 520px;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 300px;
+  width: clamp(200px, 18vw, 320px);
   flex-shrink: 0;
   padding: 40px 0 40px 40px; 
   border-left: 4px solid black;
@@ -155,7 +162,7 @@ body {
   text-decoration: none;
   color: rgb(10, 42, 223);
   font-weight: bold;
-  font-size: 32px;
+  font-size: 1.6rem;
   margin-bottom: 60px;  /* increased from 15px */
   display: block;       /* ensures each link is on its own line */
 }
@@ -197,7 +204,7 @@ body {
   }
 
   .sidebar {
-    width: 100%;
+    width: clamp(200px, 18vw, 320px);
     border-left: none;
     border-top: 2px solid black;
     padding-left: 0;
@@ -225,6 +232,47 @@ body {
 .details {
   font-style: italic;
   color: #333;
+}
+
+.chapter summary {
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  list-style: none;
+  color: #1a3a6e;        
+  background: #49db0f6b;     
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.section-header {
+  display: inline-block;       /* so border-bottom doesn’t stretch full width */
+  border-bottom: 3px solid #1a73e8;  /* nice bright blue */
+  padding-bottom: 4px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+
+  font-size: 26px;
+  font-weight: bold;
+  color: #1a3a6e;              /* matching darker blue text */
+}
+
+.chapter summary:hover {
+  background: #d4950c2c;
+  color: #c40b0b;
+}
+
+.chapter summary::before {
+  content: "⊕ ";
+}
+
+.chapter[open] summary::before {
+  content: "⊖ ";
+}
+
+.chapter-content {
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 .chapter-link {

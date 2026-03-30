@@ -199,6 +199,14 @@ body {
   padding: 20px 0;
 }
 
+.theorem-img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 10px auto;
+}
+
 .monthly-theorem h3 {
   font-size: 28px;
   margin-bottom: 15px;

@@ -24,14 +24,15 @@
 <div class="layout">
   <div class="main-left">
     
-    <h2 class="section-header"> Work update [RELEASE] (15/05/2026):</h2>
+    <h2 class="section-header"> Work update (30/05/2026):</h2>
       <p class="details">
-        Completed the derivation of Euler-Lagrange equation from D'Alembert principle using the virtual displacement theory.
-        Finished to work on the github automatization to generate the chapter from the .tex file.
-        Started an additionnal "examples and exercices" pdf, planned for every section of the book.
+        Reworked the pdf style, table of content display and added a new summary page template. 
+        Wrote a 3 pages summary at the end of the pdf "newtonian mechanics". Introduced the generalized energy
+        (also known as hamiltonian), and started to derive least action principle.
         <br></br>
-        Next: Rederiving Euler-Lagrange equation from least action principle, introduce Legendre transforms and Hamilton equation.
-        Then start on the conclusion, appendices and exercices of the analytical mechanics subsection.
+        Next: Before moving on to Hamilton equation and introduce Legendre transforms I wanted to already summarize everything I 
+        learnt and derived. But then I realized I needed stronger understanding of differential geometry. I thus started reading 
+        "The geometry of physics: an introduction" of T. Frankel, and will summarize this in the mathematical physics note.
       </p>
       <a href="news.html"> [Check the previous update and news]</a>
 
@@ -85,33 +86,16 @@
 </div>
 
 
-<div class="sidebar">
-      <nav class="menu">
-        <a href="news.html"> [Update & News]</a>
-        <a href="notes.html">Physics Notes</a>
-        <a href="https://theses.hal.science/tel-04741096">PhD Thesis</a>
-        <a href="research.html">Exploratory Projects</a>
-        <a href="about_me.html">About Me</a>
-      </nav>
+<div id="sidebar-container"></div>
 
-      <div class="monthly-theorem">
+<script>
+fetch("sidebar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("sidebar-container").innerHTML = data;
+  });
+</script>
 
-        <h3>Monthly Highlight</h3>
-
-        <img src="Lagrange.jpg" alt="Joseph Louis Lagrange" class="theorem-img">
-        
-        <a href="https://fr.wikipedia.org/wiki/Joseph-Louis_Lagrange" class="theorem-link">
-          <strong>Joseph Louis Lagrange</strong><br>
-          18th-century mathematician and physicist who helped reformulate classical mechanics into what we now call Lagrangian 
-          mechanics, a cornerstone of theoretical physics. He was basically a mathematical powerhouse who turned dynamics into a 
-          clean variational framework, laying groundwork that modern physics (from quantum field theory to general relativity) still leans on heavily.
-        </a>
-        <br></br>
-        <div class="menu">
-        <a href="physicists.html"> Check the previous highlights ! </a>
-        </div>
-      </div>
-    </div>
 
 </body>
 </html>

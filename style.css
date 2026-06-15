@@ -256,7 +256,6 @@ body {
 .phenomenon {
   font-weight: bold;
   color: #f01111;
-  text-decoration: underline;
 }
 
 .dates {
@@ -311,9 +310,11 @@ body {
 }
 
 .chapter-link {
-  font-size: 26px;
+  font-size: 28px;
   text-decoration: none;
   color: #1f4e79;
+  text-decoration: underline;
+  font-weight: bold;
   transition: all 0.2s ease;
 }
 

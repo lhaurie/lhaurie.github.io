@@ -25,6 +25,143 @@
 
 
 
+    <details class="chapter" open>
+  <summary class="chapter-title">Mathematical tools</summary>
+  <div class="chapter-content">
+    <p>This section contains all the mathematical background needed to understand the notes. The prerequisites are mostly linear algebra, basic analysis and statistic knowledge.</p>
+  <ul>
+    <li>
+      <a href="submanifolds.pdf" style="font-size: 26px;" class="chapter-link">
+        Submanifolds and differential geometry [Show PDF]
+      </a>
+
+      <p>
+        A self-contained introduction to the geometric structures underlying 
+        classical and quantum mechanics: what it means for a space to be curved, 
+        constrained, or locally flat, how calculus extends to such spaces, and 
+        how far that calculus can be pushed before topology gets in the way.
+      </p>
+
+      <ul class="subtopics">
+        <li>
+          <span class="phenomenon">Differentiability, Jacobians and diffeomorphisms</span>
+          <span class="dates">(prerequisites)</span>:
+          <span class="details">
+            The correct notion of differentiability for maps between multi-dimensional 
+            spaces, the Jacobian as its matrix representation, and diffeomorphisms as 
+            the natural equivalence between smooth spaces. The inverse function theorem 
+            is stated: an invertible linear approximation implies a locally invertible map.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Submanifolds: graph and level set views</span>
+          <span class="dates">(Lagrange, Gauss)</span>:
+          <span class="details">
+            A submanifold is a subset of an ambient space that locally looks like 
+            flat Euclidean space. Two equivalent descriptions: as the graph of a smooth 
+            function (free coordinates constraining dependent ones), or as the level set 
+            of a constraint map. The implicit function theorem makes this equivalence precise.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Tangent spaces and the regular value theorem</span>
+          <span class="dates">(modern differential geometry)</span>:
+          <span class="details">
+            The tangent space at a point captures all possible velocity directions of 
+            curves on the submanifold. When constraints are independent (measured by 
+            the rank of the Jacobian) the tangent space is exactly the kernel of the 
+            constraint derivative. This is the regular value theorem.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Charts, atlases and generalized coordinates</span>
+          <span class="dates">(Riemann, Lagrange)</span>:
+          <span class="details">
+            A chart assigns local coordinates to a patch of the manifold; an atlas 
+            covers it entirely. Generalized coordinates in mechanics are precisely 
+            chart coordinates, and a change of generalized coordinates is a transition 
+            map between charts. The coordinate-independence of the Euler-Lagrange 
+            equations follows directly from this structure.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Vector fields and flows</span>
+          <span class="dates">(modern formulation)</span>:
+          <span class="details">
+            A vector field assigns a tangent vector to every point of the manifold, 
+            independently of any coordinate choice. Its integral curves are solutions 
+            to an ODE on the manifold. Newton's equations and the Euler-Lagrange 
+            equations both define vector fields whose integral curves are the 
+            physical trajectories of the system.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Duality, covectors and one-forms</span>
+          <span class="dates">(Grassmann)</span>:
+          <span class="details">
+            A covector at a point is a linear functional on the tangent space; smoothly 
+            assembled over the manifold, covectors become one-forms, dual to vector 
+            fields. Vector components carry upper indices, covector components lower 
+            ones.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Riemannian metric and musical isomorphisms</span>
+          <span class="dates">(Riemann)</span>:
+          <span class="details">
+            A metric $g$ equips each tangent space with an inner product, giving meaning 
+            to lengths, angles, and geodesics. It also induces the musical isomorphisms, a canonical identification between vectors and 
+            covectors without a metric, the two remain structurally distinct spaces.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Tensor and exterior algebra</span>
+          <span class="dates">(Grassmann, Ricci-Curbastro)</span>:
+          <span class="details">
+            Tensor products combine vector spaces (or their duals) into higher-rank 
+            objects; their antisymmetric part is the exterior (wedge) algebra, 
+            generalizing signed area and volume to any dimension. Bivectors, k-forms, 
+            and the classical cross product all fall out as special cases, with the 
+            interior product acting as the natural degree-lowering counterpart 
+            to the wedge product.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Exterior derivative and Stokes' theorem</span>
+          <span class="dates">(Cartan, Stokes)</span>:
+          <span class="details">
+            The exterior derivative d unifies gradient, curl and divergence into one 
+            metric-free operator, defined on forms of any degree and any dimension. Its 
+            deepest property is Stokes' theorem, 
+            generalizing the fundamental theorem of calculus and giving closed and 
+            exact forms their operational meaning.
+          </span>
+        </li>
+
+        <li>
+          <span class="phenomenon">Cartan's magic formula and de Rham cohomology</span>
+          <span class="dates">(Cartan, de Rham)</span>:
+          <span class="details">
+            Cartan's formula defines the Lie derivative: the rate of change of a form 
+            dragged along a flow purely algebraically, with no reference to charts or 
+            limits, and is the key ingredient in Liouville's theorem. Pushed further, 
+            this machinery yields de Rham cohomology, which detects topological 
+            obstructions invisible to local calculus alone.
+          </span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</details>
 
 <details class="chapter">
   <summary class="chapter-title">Classical mechanics </summary>
@@ -135,100 +272,93 @@
       </ul>
     </li>
   <br></br>
-    <li>
-  <a href="analytical_mechanics.pdf" style="font-size: 26px;" class="chapter-link">
-    Analytical mechanics: constraints, variational principles, Lagrangian & Hamilton formalisms [Show PDF]
-  </a>
+<li> <a href="analytical_mechanics.pdf" style="font-size: 26px;" class="chapter-link"> Analytical mechanics I: constraints, Lagrangian mechanics and variational principles [Show PDF] </a>
 
-  <p>
-    A systematic reformulation of classical mechanics that replaces Newton's force-based 
-    approach with a scalar, coordinate-free framework. Constraints are encoded geometrically, 
-    unknown forces disappear by construction, and the entire dynamics of a system follows 
-    from a single scalar function: the Lagrangian. The chapter will then cover up the least action 
-    principle as well as Hamilton formulation.
-  </p>
+<p> A geometric reformulation of classical mechanics, adapted to constrained systems. The chapter introduces 
+  configuration spaces and generalized coordinates, eliminates constraint forces through D'Alembert's principle, 
+  and derives the Euler-Lagrange equations and Lagrangian formalism. It then develops generalized potentials, 
+  rheonomic constraints, the Hamiltonian, and the variational formulation through Hamilton's principle. </p>
 
-  <ul class="subtopics">
+<ul class="subtopics">
 
-    <li>
-      <span class="phenomenon"> Constraints and configuration space </span>
-      <span class="dates">(Lagrange, 18th century)</span>:
-      <span class="details">
-        Physical systems are often subject to constraints that restrict their accessible 
-        configurations. Holonomic constraints depend only on positions and time, and define 
-        a smooth submanifold of the ambient space called the configuration space. Each 
-        independent constraint reduces the number of degrees of freedom by one, compressing 
-        the description from the full ambient space to a smaller, geometry-adapted manifold.
-      </span>
-    </li>
+<li>
+  <span class="phenomenon"> Constraints and configuration space </span>
+  <span class="dates">(Lagrange, 18th century)</span>:
+  <span class="details">
+    Holonomic constraints restrict the accessible configurations to a smooth
+    configuration manifold. This replaces the redundant ambient description
+    by the geometry of the system itself and identifies the number of degrees
+    of freedom.
+  </span>
+</li>
 
-    <li>
-      <span class="phenomenon"> Generalized coordinates </span>
-      <span class="dates">(Lagrange)</span>:
-      <span class="details">
-        Rather than working in redundant Cartesian coordinates, one parametrizes the 
-        configuration space directly using a minimal set of independent parameters called 
-        generalized coordinates. These are the natural coordinates of the constraint manifold: 
-        free, independent, and adapted to the geometry of the system. The state space shrinks 
-        accordingly, from the full ambient space to a 2d-dimensional space of generalized 
-        positions and velocities.
-      </span>
-    </li>
+<li>
+  <span class="phenomenon"> Generalized coordinates and state space </span>
+  <span class="dates">(Lagrange)</span>:
+  <span class="details">
+    Local coordinates given by charts on the configuration manifold provide independent generalized
+    coordinates and velocities. The mechanical state is naturally represented by the tangent bundle. Despite
+     their name, configuration and state space are not always vector space.
+  </span>
+</li>
 
-    <li>
-      <span class="phenomenon"> Virtual displacements and D'Alembert's principle </span>
-      <span class="dates">(D'Alembert, 18th century)</span>:
-      <span class="details">
-        A virtual displacement is an infinitesimal change of configuration at fixed time, 
-        compatible with the constraints. Because constraint forces are normal to the 
-        configuration manifold while virtual displacements are tangent to it, constraint 
-        forces do no virtual work. D'Alembert's principle exploits this geometric fact to 
-        eliminate all unknown constraint forces from Newton's law, leaving a scalar equation 
-        involving only applied forces and accelerations.
-      </span>
-    </li>
+<li>
+  <span class="phenomenon"> Virtual displacements and D'Alembert's principle </span>
+  <span class="dates">(D'Alembert, 18th century)</span>:
+  <span class="details">
+    Virtual displacements are tangent variations of the configuration at fixed time.
+    For holonomic constraints, constraint forces do no virtual work, allowing them
+    to disappear from Newton's equations and reducing the dynamics to the
+    configuration manifold.
+  </span>
+</li>
 
-    <li>
-      <span class="phenomenon"> Euler-Lagrange equations </span>
-      <span class="dates">(Euler, Lagrange, 18th century)</span>:
-      <span class="details">
-        Expressing D'Alembert's principle in generalized coordinates and decomposing forces 
-        into conservative and non-conservative parts naturally produces the Euler-Lagrange 
-        equations. The conservative forces combine with the kinetic energy into a single 
-        scalar function, the Lagrangian L = T - U, from which the equations of motion follow 
-        by differentiation alone. This reduces a system of 3N coupled vector equations to d 
-        scalar equations, with unknown forces absent by construction.
-      </span>
-    </li>
+<li>
+  <span class="phenomenon"> Euler-Lagrange equations and the Lagrangian </span>
+  <span class="dates">(Euler, Lagrange, 18th century)</span>:
+  <span class="details">
+    Expressing D'Alembert's principle in generalized coordinates leads to the
+    Euler-Lagrange equations. The dynamics is encoded
+    by the scalar Lagrangian (kinetic energy minus potential energy), reducing the original vector
+    equations to one scalar equation per degree of freedom.
+  </span>
+</li>
 
-    <li>
-      <span class="phenomenon"> Scleronomic and rheonomic constraints </span>
-      <span class="dates">(classical mechanics)</span>:
-      <span class="details">
-        Constraints that do not depend explicitly on time are called scleronomic; those that 
-        do are called rheonomic. The Euler-Lagrange equation remains valid in both cases, but 
-        in the rheonomic setting the kinetic energy acquires linear and constant terms in the 
-        generalized velocities, breaking the purely quadratic structure that underlies energy 
-        conservation and several other standard results.
-      </span>
-    </li>
+<li>
+  <span class="phenomenon"> Generalized potentials, forces and energy </span>
+  <span class="dates">(Lagrangian mechanics)</span>:
+  <span class="details">
+    Velocity dependent potential are naturally preserved by Euler-Lagrange dynamic, 
+    while non-conservative forces remain explicit. While the mechanical energy is then no longer conserved, 
+    a generalized version of it called "Hamiltonian" is conserved, as long as no explicit time dependence is 
+    considered.
+  </span>
+</li>
 
-    <li>
-      <span class="phenomenon"> Least action principle </span>
-      <span class="dates">(Soon)</span>:
-      <span class="details">
-      </span>
-    </li>
-    <li>
-      <span class="phenomenon"> Hamilton formalism </span>
-      <span class="dates">(Soon)</span>:
-      <span class="details">
-      </span>
-    </li>
+<li>
+  <span class="phenomenon"> Scleronomic and rheonomic constraints </span>
+  <span class="dates">(classical mechanics)</span>:
+  <span class="details">
+    Time-independent constraints are scleronomic, while moving constraints are
+    rheonomic. Euler-Lagrange equations remain valid in both cases, but rheonomic
+    constraints modify the structure of the kinetic energy leading to a non-quadratic Lagrangian and generally preventing
+    the identification of the Hamiltonian with "kinetic energy + potential", by opposition to mechanical energy.
+  </span>
+</li>
 
-    </ul>
-  </li>
+<li>
+  <span class="phenomenon"> Hamilton's principle and the action </span>
+  <span class="dates">(Maupertuis, Euler, Hamilton)</span>:
+  <span class="details">
+    The action is a functional on paths in configuration space. Requiring its
+    first variation to vanish, independently yields the
+    Euler-Lagrange equations and provides a formulation of mechanics that no
+    longer starts from forces or Newton's laws. This is a fully field dependent description.
+  </span>
+</li>
 
+</ul> 
+</li>
   </ul>
   </div>
 </details>
@@ -324,7 +454,7 @@
   <p>Soon</p>
 </details>
 
-<details class="chapter" open>
+<details class="chapter">
   <summary class="chapter-title">Quantum mechanics </summary>
   <div class="chapter-content">
     <ul>
@@ -431,84 +561,7 @@
   <p>Soon</p>
 </details>
 
-<details class="chapter">
-  <summary class="chapter-title">Mathematical tools</summary>
-  <div class="chapter-content">
-  <ul>
-    <li>
-      <a href="submanifolds.pdf" style="font-size: 26px;" class="chapter-link">
-        Submanifolds and differential geometry [Show PDF]
-      </a>
 
-      <p>
-        A self-contained introduction to the geometric structures underlying 
-        classical and quantum mechanics: what it means for a space to be curved, 
-        constrained, or locally flat, and how calculus extends to such spaces.
-      </p>
-
-      <ul class="subtopics">
-        <li>
-          <span class="phenomenon">Differentiability, Jacobians and diffeomorphisms</span>
-          <span class="dates">(prerequisites)</span>:
-          <span class="details">
-            The correct notion of differentiability for maps between multi-dimensional 
-            spaces, the Jacobian as its matrix representation, and diffeomorphisms as 
-            the natural equivalence between smooth spaces. The inverse function theorem 
-            is stated: an invertible linear approximation implies a locally invertible map.
-          </span>
-        </li>
-
-        <li>
-          <span class="phenomenon">Submanifolds: graph and level set views</span>
-          <span class="dates">(Lagrange, Gauss)</span>:
-          <span class="details">
-            A submanifold is a subset of an ambient space that locally looks like 
-            flat Euclidean space. Two equivalent descriptions: as the graph of a smooth 
-            function (free coordinates constraining dependent ones), or as the level set 
-            of a constraint map. The implicit function theorem makes this equivalence precise.
-          </span>
-        </li>
-
-        <li>
-          <span class="phenomenon">Tangent spaces and the regular value theorem</span>
-          <span class="dates">(modern differential geometry)</span>:
-          <span class="details">
-            The tangent space at a point captures all possible velocity directions of 
-            curves on the submanifold. When constraints are independent — measured by 
-            the rank of the Jacobian — the tangent space is exactly the kernel of the 
-            constraint derivative. This is the regular value theorem.
-          </span>
-        </li>
-
-        <li>
-          <span class="phenomenon">Charts, atlases and generalized coordinates</span>
-          <span class="dates">(Riemann, Lagrange)</span>:
-          <span class="details">
-            A chart assigns local coordinates to a patch of the manifold; an atlas 
-            covers it entirely. Generalized coordinates in mechanics are precisely 
-            chart coordinates, and a change of generalized coordinates is a transition 
-            map between charts. The coordinate-independence of the Euler-Lagrange 
-            equations follows directly from this structure.
-          </span>
-        </li>
-
-        <li>
-          <span class="phenomenon">Vector fields and flows</span>
-          <span class="dates">(modern formulation)</span>:
-          <span class="details">
-            A vector field assigns a tangent vector to every point of the manifold, 
-            independently of any coordinate choice. Its integral curves are solutions 
-            to an ODE on the manifold. Newton's equations and the Euler-Lagrange 
-            equations both define vector fields whose integral curves are the 
-            physical trajectories of the system.
-          </span>
-        </li>
-
-      </ul>
-    </li>
-  </ul>
-  </div>
-</details>
 
 <details class="chapter">
   <summary class="chapter-title">Exercises & Examples</summary>
